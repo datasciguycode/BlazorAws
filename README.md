@@ -1,3 +1,0 @@
-# BlazorAws
-
-Test update.
