@@ -36,7 +36,7 @@ Add-DbContextRef -p_strProjectName $strProjectName -p_strDbName $strDbName
 ## Add-ControllersRef -p_strProjectFolder $strProjectFolder
 
 # Add BaseUri to client and server appsettings.json 
-Add-BaseUri -p_strProjectFolder $strProjectFolder -p_strAppSettingsFilePath "$strProjectFolder\appsettings.json"
+Add-BaseUri -p_strProjectFolder $strProjectFolder -p_strAppSettingsFilePath "$strProjectFolder\appsettings.json" # *
 Add-BaseUri -p_strProjectFolder $strProjectFolder -p_strAppSettingsFilePath "$strProjectFolder.Client\wwwroot\appsettings.json"
 
 # Add HttpClient Services to program.cs 
@@ -51,11 +51,11 @@ Install-Package -p_strProjectFilePath $strClientProjectFilePath -p_strPackageNam
 # Add Razor Page with QuickGrid accessing server controller pasing model and returning result.AsQueryable();  
 Add-ModelSpecificPageFiles
 
-# Add Domain library *
+# Add Domain library 
 # dotnet new classlib -n "Domain" -o ".\Domain"  # new
 # dotnet sln "$strProjectName.sln" add ".\Domain\Domain.csproj"  # new
 
-# Add Infrastructure library *
+# Add Infrastructure library 
 # dotnet new classlib -n "Infrastructure" -o ".\Infrastructure"  # new
 # dotnet sln "$strProjectName.sln" add ".\Infrastructure\Infrastructure.csproj"  # new
 
